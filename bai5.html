@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    input {
+        margin: 5px 0;
+    }
+</style>
+<!--<select>-->
+<!--    <option value="1" id="toan">Toán</option>-->
+<!--    <option value="2" id="ly">Lý</option>-->
+<!--    <option value="3" id="hoa">Hóa</option>-->
+<!--</select> <br>-->
+<input id="num"> Điểm kiểm tra <br>
+<input id="num1"> Điểm thi giữa kì <br>
+<input id="num2"> Điểm thi cuối kì <br>
+<button onclick="kq()">Tính</button>
+<p id="src"></p>
+<script>
+    function kq() {
+        let num = +document.getElementById('num').value;
+        let num1 = +document.getElementById('num1').value;
+        let num2 = +document.getElementById('num2').value;
+        let kq = (num*20/100 + num1*40/100 + num2*40/100);
+        let kt ="";
+        if (kq<5){
+            kt = "Học sinh kém :"+kq;
+        } else if (kq<7){
+            kt = "Học sinh trung bình :"+kq;
+        } else if (kq<8){
+            kt = "Học sinh khá :" +kq;
+        } else if (kq>8){
+            kt = "Học sinh giỏi :" +kq;
+        }
+        document.getElementById('src').innerHTML =kt;
+    }
+</script>
+</body>
+</html>

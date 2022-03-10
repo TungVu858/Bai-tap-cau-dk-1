@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" id="age">
+    <button onclick="kiemtra()">Kiểm tra</button>
+    <p id="ketqua">Kết quả:</p>
+    <script>
+        function kiemtra() {
+            let num = document.getElementById('age').value;
+            if (num <15){
+                document.getElementById('ketqua').innerHTML ="Kết quả :không đủ điều kiện học lớp 10"
+            } else {
+                document.getElementById('ketqua').innerHTML = "Kết quả : đủ điều kiện"
+            }
+        }
+
+    </script>
+</body>
+</html>

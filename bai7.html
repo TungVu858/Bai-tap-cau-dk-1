@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="num" placeholder="nhập lần cuộc gọi">
+    <button onclick="tinh()">Tính</button>
+    <p id="result"></p>
+    <script>
+        function tinh(){
+            let num = document.getElementById('num').value;
+            let kq = num*900;
+            let kq1 = num+1300;
+            let kq2 = num*7000;
+            let kt = "";
+            if (num<5){
+                kt = "cước phí của bạn là :"+kq;
+            } else if (num<20){
+                kt = "cước phí của bạn là :"+kq1;
+            } else {
+                kt = "cước phí của bạn là :"+kq2;
+            }
+            document.getElementById('result').innerHTML = kt;
+        }
+    </script>
+</body>
+</html>

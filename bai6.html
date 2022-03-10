@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="num" placeholder="nhập số tiền bạn bán được:">
+    <button onclick="nhap()">Nhập</button>
+    <p id="result"></p>
+    <script>
+        function nhap() {
+            let num = +document.getElementById('num').value;
+            let kt = "";
+            let hoahong = num*0.5/100;
+            if (num<100000000){
+                kt = "bạn k có hoa hồng";
+            }
+            else if (num>100000000){
+                kt = "hoa hồng của bạn là:" +hoahong;
+            }
+            result.innerHTML = kt;
+        }
+    </script>
+</body>
+</html>

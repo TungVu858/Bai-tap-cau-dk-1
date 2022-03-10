@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num">
+<button onclick="sosanh()">So sánh</button>
+<p id="result"></p>
+<script>
+    let num = document.getElementById('num');
+    let result = document.getElementById('result');
+    function sosanh() {
+        if (num.value>0){
+            result.innerHTML="Đây là số dương";
+        } else {
+            result.innerHTML ="Đây là số âm";
+        }
+    }
+</script>
+</body>
+</html>
